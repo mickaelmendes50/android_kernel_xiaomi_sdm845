@@ -1,72 +1,4 @@
 ifeq ($(CONFIG_MACH_XIAOMI_SDM845),y)
-ifeq ($(CONFIG_BUILD_ARM64_DT_OVERLAY),y)
-	dtbo-y += \
-		sdm845-mtp-overlay.dtbo \
-		sdm845-v2-mtp-overlay.dtbo \
-		sdm845-v2.1-mtp-overlay.dtbo
-
-	dtbo-$(CONFIG_MACH_XIAOMI_D5X) += \
-		polaris-p0-overlay.dtbo  \
-		polaris-p0-v2-overlay.dtbo \
-		polaris-p1-overlay.dtbo  \
-		polaris-p1-v2-overlay.dtbo \
-		polaris-p1-v2.1-overlay.dtbo \
-		polaris-p2-overlay.dtbo  \
-		polaris-p2-v2-overlay.dtbo \
-		polaris-p2-v2.1-overlay.dtbo \
-		polaris-p3-overlay.dtbo  \
-		polaris-p3-v2-overlay.dtbo \
-		polaris-p3-v2.1-overlay.dtbo
-
-	dtbo-$(CONFIG_MACH_XIAOMI_E1N) += \
-		dipper-p0-v2-overlay.dtbo \
-		dipper-p0-v2.1-overlay.dtbo \
-
-	dtbo-$(CONFIG_MACH_XIAOMI_E10) += \
-		beryllium-p0-v2-overlay.dtbo \
-		beryllium-p0-v2.1-overlay.dtbo
-
-	dtbo-$(CONFIG_MACH_XIAOMI_E5) += \
-		perseus-p0-v2.1-overlay.dtbo \
-		perseus-p1-v2.1-overlay.dtbo \
-		perseus-p1_2-v2.1-overlay.dtbo \
-		perseus-p2-v2.1-overlay.dtbo \
-		perseus-p3-v2.1-overlay.dtbo \
-		perseus-mp-v2.1-overlay.dtbo
-
-sdm845-mtp-overlay.dtbo-base := sdm845.dtb
-sdm845-v2-mtp-overlay.dtbo-base := sdm845-v2.dtb
-sdm845-v2.1-mtp-overlay.dtbo-base := sdm845-v2.1.dtb
-
-polaris-p0-overlay.dtbo-base := sdm845.dtb
-polaris-p0-v2-overlay.dtbo-base := sdm845-v2.dtb
-polaris-p1-overlay.dtbo-base := sdm845.dtb
-polaris-p1-v2-overlay.dtbo-base := sdm845-v2.dtb
-polaris-p1-v2.1-overlay.dtbo-base := sdm845-v2.1.dtb
-polaris-p2-overlay.dtbo-base := sdm845.dtb
-polaris-p2-v2-overlay.dtbo-base := sdm845-v2.dtb
-polaris-p2-v2.1-overlay.dtbo-base := sdm845-v2.1.dtb
-polaris-p3-overlay.dtbo-base := sdm845.dtb
-polaris-p3-v2-overlay.dtbo-base := sdm845-v2.dtb
-polaris-p3-v2.1-overlay.dtbo-base := sdm845-v2.1.dtb
-
-dipper-p0-v2-overlay.dtbo-base := sdm845-v2.dtb
-dipper-p0-v2.1-overlay.dtbo-base := sdm845-v2.1.dtb
-dipper-p1-v2-overlay.dtbo-base := sdm845-v2.dtb
-dipper-p1-v2.1-overlay.dtbo-base := sdm845-v2.1.dtb
-dipper-p2-v2-overlay.dtbo-base := sdm845-v2.dtb
-dipper-p2-v2.1-overlay.dtbo-base := sdm845-v2.1.dtb
-
-beryllium-p0-v2-overlay.dtbo-base := sdm845-v2.dtb
-beryllium-p0-v2.1-overlay.dtbo-base := sdm845-v2.1.dtb
-
-perseus-p0-v2.1-overlay.dtbo-base := sdm845-v2.1.dtb
-perseus-p1-v2.1-overlay.dtbo-base := sdm845-v2.1.dtb
-perseus-p1_2-v2.1-overlay.dtbo-base := sdm845-v2.1.dtb
-perseus-p2-v2.1-overlay.dtbo-base := sdm845-v2.1.dtb
-perseus-p3-v2.1-overlay.dtbo-base := sdm845-v2.1.dtb
-perseus-mp-v2.1-overlay.dtbo-base := sdm845-v2.1.dtb
-else
 dtb-y += \
 	sdm845-sim.dtb \
 	sdm845-rumi.dtb \
@@ -144,7 +76,6 @@ dtb-$(CONFIG_MACH_XIAOMI_E5) += \
 	perseus-p2-v2.1.dtb \
 	perseus-p3-v2.1.dtb \
 	perseus-mp-v2.1.dtb
-endif
 else
 dtb-$(CONFIG_ARCH_QCOM)	+= apq8016-sbc.dtb msm8916-mtp.dtb
 dtb-$(CONFIG_ARCH_QCOM)	+= msm8996-mtp.dtb
